@@ -8,14 +8,14 @@
 [ext_resource type="Script" path="res://chunk_group.gd" id="6_bv2oo"]
 [ext_resource type="Texture2D" uid="uid://ks4howg4vpo4" path="res://Assets/Pixel Art/white-tile.png" id="8_tmwqt"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rafp1"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_je3vn"]
 texture = ExtResource("8_tmwqt")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_j6viy"]
+[sub_resource type="TileSet" id="TileSet_5sdjf"]
 tile_size = Vector2i(32, 32)
-sources/1 = SubResource("TileSetAtlasSource_rafp1")
+sources/0 = SubResource("TileSetAtlasSource_je3vn")
 
 [node name="MainScene" type="Node2D"]
 
@@ -44,6 +44,9 @@ script = ExtResource("6_bv2oo")
 [node name="ProceduralGeneration" type="Node" parent="ChunkManager"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="ChunkManager"]
-tile_set = SubResource("TileSet_j6viy")
+tile_set = SubResource("TileSet_5sdjf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("8_tmwqt")

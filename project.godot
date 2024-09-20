@@ -11,7 +11,8 @@ config_version=5
 [application]
 
 config/name="CherryGame"
-run/main_scene="res://menu_principal.tscn"
+
+run/main_scene="res://MainScene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 

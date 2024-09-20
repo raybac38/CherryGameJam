@@ -1,42 +1,46 @@
 extends Node
 
+@onready var TILEMAP : TileMapLayer = $TileMapLayer
+
+const CHUNKGROUP = preload("res://chunk_group.gd")
+
+
 ## entry point of ths script : 
 func balise_placed():
 	return 0
 
-class ChunkGroup:
-	var chunks = []
+var chunk_manager : ChunkManager
 
-	func add_chunk(chunk):
-		chunks.append(chunk)
-		return 0
-
-	func get_chunk_number():
-		return chunks.size()
-
-	func remove_chunk(chunk):
-		chunks.erase(chunk)
-		return 0
-
-
+func _ready() -> void:
+	print("start")
+	
+	chunk_manager = ChunkManager.new(TILEMAP)
+	var test_group : Array = [Vector2i(0,0)]
+	
+	chunk_manager.add_new_area(test_group)
+	
 class ChunkManager:
 	var groups = []
+	var tilemap : TileMapLayer = null
+	
+	func _init(new_tilemap : TileMapLayer):
+		tilemap = new_tilemap
+	
+	##Return a group for later use
+	func add_new_area(requested_position : Array):
+		print("new area")
+		print(requested_position)
+		var group = CHUNKGROUP.ChunkGroup.new(requested_position, tilemap)
+		add_group(group);
+		return group
+	
 	
 	func add_group(group):
 		groups.append(group)
+		
 		return 0
 	
 	func remove_group(group):
 		groups.erase(group)
 		return 0
 	
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
