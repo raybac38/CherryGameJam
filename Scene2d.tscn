@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://c12cpipsptjgt"]
 
-[node name="Node2D" type="Node2D"]
+[node name="MainScene" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Player" type="Node" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="Balise" type="Node" parent="."]
