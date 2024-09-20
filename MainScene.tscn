@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0ncypjorv1ml"]
+[gd_scene load_steps=3 format=3 uid="uid://d0ncypjorv1ml"]
 
 [ext_resource type="Script" path="res://creature.gd" id="1_icn5g"]
 [ext_resource type="Script" path="res://player.gd" id="2_ppgk6"]
-[ext_resource type="Script" path="res://chunk_manager.gd" id="3_48kx5"]
-[ext_resource type="Script" path="res://chunk.gd" id="4_7uv8c"]
 
 [node name="MainScene" type="Node2D"]
 
@@ -16,9 +14,3 @@ script = ExtResource("2_ppgk6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Creature/Player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Creature/Player"]
-
-[node name="ChunkManager" type="Node" parent="."]
-script = ExtResource("3_48kx5")
-
-[node name="Chunk" type="Node" parent="ChunkManager"]
-script = ExtResource("4_7uv8c")
