@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0ncypjorv1ml"]
+
+[ext_resource type="Script" path="res://creature.gd" id="1_icn5g"]
+[ext_resource type="Script" path="res://player.gd" id="2_ppgk6"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Creature" type="CharacterBody2D" parent="."]
+script = ExtResource("1_icn5g")
+
+[node name="Player" type="CharacterBody2D" parent="Creature"]
+script = ExtResource("2_ppgk6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Creature/Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Creature/Player"]
