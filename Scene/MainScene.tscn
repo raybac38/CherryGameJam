@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d0ncypjorv1ml"]
+[gd_scene load_steps=24 format=3 uid="uid://d0ncypjorv1ml"]
 
 [ext_resource type="Script" path="res://Scripts/Entity/creature.gd" id="1_t7l4m"]
 [ext_resource type="Script" path="res://Scripts/Entity/player.gd" id="2_tiqq6"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" path="res://Scripts/UI/main_scene.gd" id="13_lvy1m"]
 [ext_resource type="Script" path="res://Scripts/constante.gd" id="14_wjnwa"]
 [ext_resource type="PackedScene" uid="uid://ctpcitpeqwa6l" path="res://Scene/gui.tscn" id="15_ri3o1"]
+[ext_resource type="Texture2D" uid="uid://cnyn3b1rxpcqr" path="res://Assets/Pixel Art/lawnmower-left.png" id="16_ch28h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbqhv"]
 texture = ExtResource("3_f7lmd")
@@ -94,3 +95,7 @@ script = ExtResource("13_lvy1m")
 script = ExtResource("14_wjnwa")
 
 [node name="GUI" parent="." instance=ExtResource("15_ri3o1")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
+texture = ExtResource("16_ch28h")
