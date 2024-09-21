@@ -1,5 +1,4 @@
-extends "res://creature.gd"
-
+extends  "res://Scripts/Entity/creature.gd"
 
 func _physics_process(delta: float) -> void:
 	var direction:Vector2 = Vector2(0,0)

@@ -1,7 +1,7 @@
 extends Node
 
 var TILEMAP : TileMapLayer = null
-const CHUNKGROUP = preload("res://chunk_group.gd")
+const CHUNKGROUP = preload("res://Scripts/Terrain/chunk_group.gd")
 var groups = []
 
 func set_tilemap(tilemap :TileMapLayer):
