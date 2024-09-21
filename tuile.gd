@@ -2,7 +2,6 @@ extends Node
 
 class Tuile:
 	var local_pos : Vector2i
-	var texture: Texture2D
 	var id: int
 	
 	func _init(starting_position):
