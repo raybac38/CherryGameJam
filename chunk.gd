@@ -2,8 +2,6 @@ extends Node
 
 const TUILE = preload("res://tuile.gd")
 
-const  nb_tuile_par_chunk : int = 3
-
 class chunk:
 	var is_generated : bool = false;
 	var position : Vector2i
@@ -11,10 +9,13 @@ class chunk:
 	var tuiles = []
 
 	func _init(new_position : Vector2i, new_tilemap_ref : TileMapLayer):
+		if new_tilemap_ref == null: 
+			printerr("tilemap_ref is null")
+			
 		tilemap_ref = new_tilemap_ref
 		position = new_position
-		for i in range(nb_tuile_par_chunk):
-			for j in range(nb_tuile_par_chunk):
+		for i in range(Constante.NB_TUILE_PAR_CHUNK):
+			for j in range(Constante.NB_TUILE_PAR_CHUNK):
 				var tuile = TUILE.Tuile.new(Vector2i(i,j))
 				add_tuile(tuile)
 		blank_test()
@@ -36,10 +37,8 @@ class chunk:
 			var pos = i.get_posision()
 			var tuile_id = 1
 			i.set_id(tuile_id)
-			var absolut_pos : Vector2i = pos + (position * nb_tuile_par_chunk)
-			print(absolut_pos)
+			var absolut_pos : Vector2i = pos + (position * Constante.NB_TUILE_PAR_CHUNK)
 			tilemap_ref.set_cell(absolut_pos, tuile_id, Vector2i(0,0))
 			tilemap_ref.update_internals()
-			print("set tile ID")
-			print(tuile_id)
+
 			

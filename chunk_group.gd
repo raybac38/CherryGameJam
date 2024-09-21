@@ -13,8 +13,6 @@ class ChunkGroup:
 		tilemap = new_tilemap
 		for i in requested_position:
 			var chunk = CHUNK.chunk.new(i, new_tilemap)
-			print("add a chunk at")
-			print(i)
 			add_chunk(chunk);
 
 	func add_chunk(chunk):
