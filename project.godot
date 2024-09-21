@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="CherryGame"
-run/main_scene="res://MainScene.tscn"
+run/main_scene="res://Scene/MainScene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-ChunkManager="*res://chunk_manager.gd"
-Constante="*res://constante.gd"
+ChunkManager="*res://Scripts/Terrain/chunk_manager.gd"
+Constante="*res://Scripts/constante.gd"
 
 [display]
 
