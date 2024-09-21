@@ -64,6 +64,9 @@ script = ExtResource("2_ppgk6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Creature/Player"]
 
+[node name="Blue-tile" type="Sprite2D" parent="Creature/Player"]
+texture = ExtResource("7_rsd54")
+
 [node name="ChunkManager" type="Node" parent="."]
 script = ExtResource("3_48kx5")
 
