@@ -15,7 +15,7 @@ func _ready() -> void:
 	print("start")
 	
 	chunk_manager = ChunkManager.new(TILEMAP)
-	var test_group : Array = [Vector2i(0,0)]
+	var test_group : Array = [Vector2i(0,0), Vector2i(1,0), Vector2i(1,1), Vector2i(2,1)]
 	
 	chunk_manager.add_new_area(test_group)
 	
