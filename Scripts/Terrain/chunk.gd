@@ -1,6 +1,6 @@
 extends Node
 
-const TUILE = preload("res://tuile.gd")
+const TUILE = preload("res://Scripts/Terrain/tuile.gd")
 
 class chunk:
 	var is_generated : bool = false;

@@ -8,4 +8,4 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_pressed():
-		get_tree().change_scene_to_file("res://MainScene.tscn")
+		get_tree().change_scene_to_file("res://Scene/MainScene.tscn")

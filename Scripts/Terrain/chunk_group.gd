@@ -1,6 +1,6 @@
 extends Node
 
-const CHUNK = preload("res://chunk.gd")
+const CHUNK = preload("res://Scripts/Terrain/chunk.gd")
 
 class ChunkGroup:
 	var chunks = []
