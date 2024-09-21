@@ -4,6 +4,7 @@ const CHUNK = preload("res://Scripts/Terrain/chunk.gd")
 
 class ChunkGroup:
 	var chunks = []
+	var line : Line2D = null
 	
 	var tilemap : TileMapLayer = null;
 	
@@ -14,6 +15,7 @@ class ChunkGroup:
 		for i in requested_position:
 			var chunk = CHUNK.chunk.new(i, new_tilemap)
 			add_chunk(chunk);
+		
 
 	func add_chunk(chunk):
 		chunks.append(chunk)
