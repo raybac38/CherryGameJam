@@ -1,8 +1,4 @@
-
 extends CharacterBody2D
-
-
-
 
 var speed : float
 var can_move : bool
