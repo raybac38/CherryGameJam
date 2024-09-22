@@ -20,6 +20,10 @@ func _physics_process(_delta: float) -> void:
 		direction.x = 1 * speed
 	if Input.is_action_pressed("left"):
 		direction.x -= 1 * speed
+	if Input.is_action_just_pressed("sprint"):
+		speed *= 1.5
+	elif Input.is_action_just_released("sprint"):
+		speed /= 1.5 
 	move(direction.normalized())
 	
 	## Test code
