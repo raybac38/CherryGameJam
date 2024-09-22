@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctpcitpeqwa6l"]
+
+[ext_resource type="Texture2D" uid="uid://cmdheff5kx4oi" path="res://Assets/Pixel Art/health_bar_background.png" id="1_xvkm7"]
+[ext_resource type="Texture2D" uid="uid://4isogclhohaw" path="res://Assets/Pixel Art/health_bar_contour.png" id="2_854jr"]
+[ext_resource type="Texture2D" uid="uid://c5heae7ndoycs" path="res://Assets/Pixel Art/health_bar_filling.png" id="3_3alnc"]
+[ext_resource type="Script" path="res://Scripts/UI/health_bar.gd" id="4_ode5r"]
+[ext_resource type="Script" path="res://Scripts/UI/hunger_bar.gd" id="5_s18yo"]
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 380.0
+offset_right = 160.0
+offset_bottom = 412.0
+max_value = 10.0
+value = 10.0
+texture_under = ExtResource("1_xvkm7")
+texture_over = ExtResource("2_854jr")
+texture_progress = ExtResource("3_3alnc")
+script = ExtResource("4_ode5r")
+
+[node name="HungerBar" type="TextureProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 450.0
+offset_right = 160.0
+offset_bottom = 482.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 20.0
+value = 100.0
+script = ExtResource("5_s18yo")

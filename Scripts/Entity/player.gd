@@ -1,7 +1,14 @@
 extends  "res://Scripts/Entity/creature.gd"
 
 
-func _physics_process(delta: float) -> void:
+signal health_changed(new_health)
+
+
+var hunger = 0
+
+
+func _physics_process(_delta: float) -> void:
+
 	var direction:Vector2 = Vector2(0,0)
 
 	if Input.is_action_pressed("up"):
@@ -20,5 +27,15 @@ func _physics_process(delta: float) -> void:
 		ChunkManager.add_new_area(new_area, position)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
+
+
+func set_hp(n: int) -> void:
+	health = n
+	if health > max_health:
+		health = max_health
+	elif health < 0:
+		health = 0
+	health_changed.emit(health)
+	
