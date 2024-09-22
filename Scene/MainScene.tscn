@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bbtx6ygqse3dv" path="res://Assets/Pixel Art/Grass7.png" id="15_dggg6"]
 [ext_resource type="PackedScene" uid="uid://ctpcitpeqwa6l" path="res://Scene/gui.tscn" id="15_ri3o1"]
 [ext_resource type="Script" path="res://Scene/music.gd" id="19_c7dlc"]
-[ext_resource type="AudioStream" uid="uid://caplfpciimg37" path="res://Assets/Son/Musique/ost_chill.mp3" id="19_cuqmf"]
+[ext_resource type="AudioStream" uid="uid://cyu4bu3cr1drk" path="res://Assets/Son/Musique/ost_chill.ogg" id="19_t8pvh"]
 [ext_resource type="Script" path="res://Scene/sfx.gd" id="20_yn3xr"]
 [ext_resource type="Script" path="res://Scene/player_sfx.gd" id="21_b0hc3"]
 [ext_resource type="Script" path="res://Scene/enemy_sfx.gd" id="22_t268c"]
@@ -116,7 +116,7 @@ script = ExtResource("14_wjnwa")
 [node name="SoundManager" type="Node" parent="."]
 
 [node name="Music" type="AudioStreamPlayer" parent="SoundManager"]
-stream = ExtResource("19_cuqmf")
+stream = ExtResource("19_t8pvh")
 script = ExtResource("19_c7dlc")
 
 [node name="SFX" type="Node" parent="SoundManager"]
