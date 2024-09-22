@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjfwomdfpxigm"
-path="res://.godot/imported/apple.png-78389f09b546e6f66eecb3030c8b2196.ctex"
+uid="uid://ca1woyi74veui"
+path="res://.godot/imported/lawnmower-right.png-f027e60c57513a8a96f9104bfcff22c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/apple.png"
-dest_files=["res://.godot/imported/apple.png-78389f09b546e6f66eecb3030c8b2196.ctex"]
+source_file="res://Assets/Pixel Art/lawnmower-right.png"
+dest_files=["res://.godot/imported/lawnmower-right.png-f027e60c57513a8a96f9104bfcff22c0.ctex"]
 
 [params]
 

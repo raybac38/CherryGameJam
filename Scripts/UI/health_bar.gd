@@ -13,4 +13,3 @@ func _process(_delta: float) -> void:
 	
 func health_changed(health: int) -> void:
 	value = health
-	print("bar change")

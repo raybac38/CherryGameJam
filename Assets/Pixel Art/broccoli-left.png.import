@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dymjveoj20d0a"
-path="res://.godot/imported/birthday-cake.png-74c152e8688907a8cb2dfe5d5e324bea.ctex"
+uid="uid://cdxpfjovb5vrd"
+path="res://.godot/imported/broccoli-left.png-a5def4b9be28a5c45a72e90dd7e8c75a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/birthday-cake.png"
-dest_files=["res://.godot/imported/birthday-cake.png-74c152e8688907a8cb2dfe5d5e324bea.ctex"]
+source_file="res://Assets/Pixel Art/broccoli-left.png"
+dest_files=["res://.godot/imported/broccoli-left.png-a5def4b9be28a5c45a72e90dd7e8c75a.ctex"]
 
 [params]
 
