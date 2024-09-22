@@ -27,14 +27,9 @@ func get_hp() -> int:
 
 func take_damage(damage: int) -> void:
 	set_hp(get_hp() - damage)
-	print(damage, " degat")
 	iframes = 60
 	
 
 func move(direction: Vector2) -> void:
 	velocity = direction * speed
 	move_and_slide()
-
-
-func _on_body_entered(body: Node2D) -> void:
-	take_damage(body.damage)

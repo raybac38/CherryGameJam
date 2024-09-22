@@ -1,9 +1,6 @@
 extends  "res://Scripts/Entity/creature.gd"
 
 
-signal health_changed(new_health)
-
-
 var hunger = 0
 
 
@@ -37,5 +34,7 @@ func set_hp(n: int) -> void:
 		health = max_health
 	elif health < 0:
 		health = 0
-	health_changed.emit(health)
-	
+	var health_bar = get_node("../../GUI/HealthBar")
+	health_bar.value = health
+	if health == 0:
+		pass #mort
