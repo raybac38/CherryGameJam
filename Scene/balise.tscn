@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://m2pbp5vi5qpe"]
+
+[ext_resource type="Texture2D" uid="uid://bra02neacirxv" path="res://Assets/Pixel Art/yellow-tile.png" id="1_i74xx"]
+
+[node name="Balise" type="Sprite2D"]
+z_index = 1
+texture = ExtResource("1_i74xx")

@@ -1,9 +1,13 @@
 extends Node
 
+var balise_prefab = preload("res://Scene/balise.tscn")
+
 var TILEMAP : TileMapLayer = null
 const CHUNKGROUP = preload("res://Scripts/Terrain/chunk_group.gd")
 const CHUNK = preload("res://Scripts/Terrain/chunk.gd")
 var groups = []
+
+var balises = []
 
 func set_tilemap(tilemap :TileMapLayer):
 	TILEMAP = tilemap
@@ -61,9 +65,18 @@ func add_new_area(requested_position : Array, player_position : Vector2):
 	var scale : int = Constante.NB_TUILE_PAR_CHUNK * Constante.TUILE_SIZE
 	var chunk_position = Vector2i(floor(player_position.x / scale), floor(player_position.y / scale))
 	
-	for i in range(requested_position.size()):
+	for i in range(requested_position.size()):	##Calculate the position IRL
 		requested_position[i] += chunk_position
 
+	## Instantiate la balise
+	
+	var balise = balise_prefab.instantiate()
+	var balise_pos : Vector2i = (chunk_position * scale )+ (Vector2i.ONE * floor(Constante.NB_TUILE_PAR_CHUNK * Constante.TUILE_SIZE / 2))
+	balise.position = balise_pos
+	add_child(balise)
+	balises.append(balise)
+	
+	
 	
 	if TILEMAP == null:
 		printerr("TILEMAP IS NULL")
@@ -110,4 +123,7 @@ func remove_group(group_index : int):
 	var group : CHUNKGROUP.ChunkGroup = groups[group_index]
 	group.decrement_all_chunk_references()
 	groups.remove_at(0)
+	var balise = balises[0]
+	balise.free()
+	balises.remove_at(0)
 	return 0

@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctpcitpeqwa6l"]
+[gd_scene load_steps=8 format=3 uid="uid://ctpcitpeqwa6l"]
 
 [ext_resource type="Texture2D" uid="uid://cmdheff5kx4oi" path="res://Assets/Pixel Art/health_bar_background.png" id="1_xvkm7"]
 [ext_resource type="Texture2D" uid="uid://4isogclhohaw" path="res://Assets/Pixel Art/health_bar_contour.png" id="2_854jr"]
 [ext_resource type="Texture2D" uid="uid://c5heae7ndoycs" path="res://Assets/Pixel Art/health_bar_filling.png" id="3_3alnc"]
 [ext_resource type="Script" path="res://Scripts/UI/health_bar.gd" id="4_ode5r"]
 [ext_resource type="Script" path="res://Scripts/UI/hunger_bar.gd" id="5_s18yo"]
+[ext_resource type="Script" path="res://Scene/interaction_label.gd" id="6_c5x4q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pnk5r"]
+font_size = 26
 
 [node name="GUI" type="CanvasLayer"]
 
@@ -40,3 +44,13 @@ grow_vertical = 2
 step = 20.0
 value = 100.0
 script = ExtResource("5_s18yo")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1920.0
+offset_bottom = 992.0
+text = "\"E\""
+label_settings = SubResource("LabelSettings_pnk5r")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("6_c5x4q")

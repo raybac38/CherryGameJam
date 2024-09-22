@@ -1,0 +1,20 @@
+MAX PRIORITY !
+
+Pose de Balise correct FINI
+UI de la Balise a mettre /!\ Manque la texture
+Ajout des ressources de base sur le terrain
+
+Mouvement : 
+
+Ajout de la collition zone découvert / non découverte
+
+Combat : 
+
+Combat CAC
+
+Si du temps ; combat a distance
+
+
+Inventaire : 
+
+Basic UI

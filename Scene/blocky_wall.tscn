@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://qemyofcalcg0"]
+
+[ext_resource type="Texture2D" uid="uid://du8vbo04ldpa0" path="res://Assets/Pixel Art/blocky-wall.png" id="1_h6irv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i1h1d"]
+size = Vector2(32, 22)
+
+[node name="Blocky-wall" type="Sprite2D"]
+texture = ExtResource("1_h6irv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_i1h1d")

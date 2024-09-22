@@ -1,7 +1,7 @@
 extends Node
 ##ONLY CONSTANTE
 
-const NB_TUILE_PAR_CHUNK : int = 8
+const NB_TUILE_PAR_CHUNK : int = 7
 
 const MAX_GROUP_SHOWED = 2
 
