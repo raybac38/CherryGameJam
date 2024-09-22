@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 ChunkManager="*res://Scripts/Terrain/chunk_manager.gd"
 Constante="*res://Scripts/constante.gd"
+ItemDatabase="res://Scripts/Data/ItemDatabase.gd"
 
 [display]
 

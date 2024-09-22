@@ -1,16 +1,17 @@
 extends  "res://Scripts/Entity/creature.gd"
 
+
 func _physics_process(delta: float) -> void:
 	var direction:Vector2 = Vector2(0,0)
 
 	if Input.is_action_pressed("up"):
-		direction.y -= 1
+		direction.y -= 1 * speed
 	if Input.is_action_pressed("down"):
-		direction.y = 1
+		direction.y = 1 * speed
 	if Input.is_action_pressed("right"):
-		direction.x = 1
+		direction.x = 1 * speed
 	if Input.is_action_pressed("left"):
-		direction.x -= 1
+		direction.x -= 1 * speed
 	move(direction.normalized())
 	
 	## Test code

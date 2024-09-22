@@ -84,6 +84,8 @@ zoom = Vector2(1.5, 1.5)
 z_index = 1
 texture = ExtResource("3_f7lmd")
 
+[node name="Inventory" type="Node" parent="Creature/Player"]
+
 [node name="ChunkManager" type="Node" parent="."]
 script = ExtResource("4_so3vg")
 
