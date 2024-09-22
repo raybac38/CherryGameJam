@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctpcitpeqwa6l"]
+[gd_scene load_steps=9 format=3 uid="uid://ctpcitpeqwa6l"]
 
 [ext_resource type="Texture2D" uid="uid://cmdheff5kx4oi" path="res://Assets/Pixel Art/health_bar_background.png" id="1_xvkm7"]
 [ext_resource type="Texture2D" uid="uid://4isogclhohaw" path="res://Assets/Pixel Art/health_bar_contour.png" id="2_854jr"]
 [ext_resource type="Texture2D" uid="uid://c5heae7ndoycs" path="res://Assets/Pixel Art/health_bar_filling.png" id="3_3alnc"]
 [ext_resource type="Script" path="res://Scripts/UI/health_bar.gd" id="4_ode5r"]
+[ext_resource type="Texture2D" uid="uid://bffl6pey6hhba" path="res://Assets/Pixel Art/hunger_bar_background.png" id="5_60syx"]
 [ext_resource type="Script" path="res://Scripts/UI/hunger_bar.gd" id="5_s18yo"]
+[ext_resource type="Texture2D" uid="uid://dybnj2gbf17jr" path="res://Assets/Pixel Art/hunger_bar_contour.png" id="6_fudyc"]
+[ext_resource type="Texture2D" uid="uid://6xyqccw1ugm4" path="res://Assets/Pixel Art/hunger_bar_filling.png" id="7_fsy7a"]
 
 [node name="GUI" type="CanvasLayer"]
 
@@ -39,4 +42,7 @@ grow_horizontal = 2
 grow_vertical = 2
 step = 20.0
 value = 100.0
+texture_under = ExtResource("5_60syx")
+texture_over = ExtResource("6_fudyc")
+texture_progress = ExtResource("7_fsy7a")
 script = ExtResource("5_s18yo")
