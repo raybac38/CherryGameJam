@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w0w4tbuqlpmh"
-path="res://.godot/imported/broccoli-right.png-1d91c6dbd0ed9f60cd88425dd97eeb9f.ctex"
+uid="uid://bffl6pey6hhba"
+path="res://.godot/imported/hunger_bar_background.png-a249fba33082359b74badbb003be371b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/broccoli-right.png"
-dest_files=["res://.godot/imported/broccoli-right.png-1d91c6dbd0ed9f60cd88425dd97eeb9f.ctex"]
+source_file="res://Assets/Pixel Art/hunger_bar_background.png"
+dest_files=["res://.godot/imported/hunger_bar_background.png-a249fba33082359b74badbb003be371b.ctex"]
 
 [params]
 

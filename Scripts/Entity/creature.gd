@@ -2,8 +2,15 @@ extends CharacterBody2D
 
 
 var speed = 300.0
-var max_health = 100
+var max_health = 10
 var health = max_health
+var damage = 1
+var iframes = 60
+
+
+func _process(_delta: float) -> void:
+	if iframes>0:
+		iframes -= 1
 
 
 func set_hp(n: int) -> void:
@@ -20,8 +27,14 @@ func get_hp() -> int:
 
 func take_damage(damage: int) -> void:
 	set_hp(get_hp() - damage)
+	print(damage, " degat")
+	iframes = 60
 	
 
 func move(direction: Vector2) -> void:
 	velocity = direction * speed
 	move_and_slide()
+
+
+func _on_body_entered(body: Node2D) -> void:
+	take_damage(body.damage)

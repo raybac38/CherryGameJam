@@ -7,6 +7,10 @@ signal health_changed(new_health)
 var hunger = 0
 
 
+func _ready():
+	pass
+
+
 func _physics_process(_delta: float) -> void:
 
 	var direction:Vector2 = Vector2(0,0)
@@ -25,10 +29,6 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("mouse1"):
 		var new_area = ChunkManager.generate_new_playable_area(Vector2i(0, 0))	## METTRE LA DIRECTION (JOUEUR BALISE)
 		ChunkManager.add_new_area(new_area, position)
-
-
-func _process(_delta: float) -> void:
-	pass
 
 
 func set_hp(n: int) -> void:
