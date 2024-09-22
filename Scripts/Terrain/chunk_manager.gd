@@ -2,6 +2,7 @@ extends Node
 
 var TILEMAP : TileMapLayer = null
 const CHUNKGROUP = preload("res://Scripts/Terrain/chunk_group.gd")
+const CHUNK = preload("res://Scripts/Terrain/chunk.gd")
 var groups = []
 
 func set_tilemap(tilemap :TileMapLayer):
@@ -62,18 +63,51 @@ func add_new_area(requested_position : Array, player_position : Vector2):
 	
 	for i in range(requested_position.size()):
 		requested_position[i] += chunk_position
+
 	
 	if TILEMAP == null:
 		printerr("TILEMAP IS NULL")
 	var group = CHUNKGROUP.ChunkGroup.new(requested_position, TILEMAP)
+	
+	
+	##On a la liste des positions des chunk requested
+	## Ajouter une vérification pour que si deux chunk se chevauche, alors 
+	
+	## Qu'est ce que j'ai a disposition ?
+	## le group qui est crée
+	## groups ou y'a les autres groupes
+	
+	## Dans le groupe que j'ai crée, est ce que j'ai un chunk qui existe dans les deux autres groupes ?
+	## si oui, enlevé le chunk du groupe et le remplacer par une référence a l'autre
+	
+	for i in range(group.get_chunk_number()):
+		var chunk : CHUNK.Chunk = group.get_chunk(i)
+
+		for index_old_group in range(groups.size()):
+			var old_group = groups[index_old_group]
+			
+			for k in range(old_group.get_chunk_number()):
+				var old_chunk : CHUNK.Chunk = old_group.get_chunk(k)
+				
+				if chunk.is_position_equal(old_chunk):
+					chunk.decrement_references()
+					old_chunk.increment_references()
+					group.set_chunk(i, old_chunk)
+					print("find a copy")
+	
 	add_group(group);
+	group.generate_terrain()
 	return group
 
 func add_group(group):
 	groups.append(group)
-	
+	if(groups.size() > Constante.MAX_GROUP_SHOWED):
+		remove_group(0)
+		print("too much groupe, removing")
 	return 0
 
-func remove_group(group):
-	groups.erase(group)
+func remove_group(group_index : int):
+	var group : CHUNKGROUP.ChunkGroup = groups[group_index]
+	group.decrement_all_chunk_references()
+	groups.remove_at(0)
 	return 0

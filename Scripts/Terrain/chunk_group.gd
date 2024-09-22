@@ -13,17 +13,33 @@ class ChunkGroup:
 	func _init(requested_position : Array, new_tilemap : TileMapLayer):
 		tilemap = new_tilemap
 		for i in requested_position:
-			var chunk = CHUNK.chunk.new(i, new_tilemap)
+			var chunk = CHUNK.Chunk.new(i, new_tilemap)
 			add_chunk(chunk);
-		
+	
+	func get_chunk(index : int):
+		return chunks[index]
 
 	func add_chunk(chunk):
 		chunks.append(chunk)
 		return 0
+	
+	func get_chunks():
+		return chunks
 
 	func get_chunk_number():
 		return chunks.size()
 
-	func remove_chunk(chunk):
-		chunks.erase(chunk)
+	func decrement_all_chunk_references():
+		for index in range(chunks.size()):
+			var chunk : CHUNK.Chunk = chunks[index]
+			print("Decrementing to all of the group")
+			chunk.decrement_references()
 		return 0
+		
+	func generate_terrain():
+		for i : CHUNK.Chunk in chunks:
+			i.blank_test()
+			
+	func set_chunk(index : int, chunk):
+		chunks[index] = chunk
+		

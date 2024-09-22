@@ -70,7 +70,11 @@ script = ExtResource("2_tiqq6")
 [node name="Blue-tile" type="Sprite2D" parent="Creature/Player"]
 texture = ExtResource("3_f7lmd")
 
+
+[node name="Inventory" type="Node" parent="Creature/Player"]
+
 [node name="Camera2D" type="Camera2D" parent="Creature/Player"]
+
 
 [node name="ChunkManager" type="Node" parent="."]
 script = ExtResource("4_so3vg")
