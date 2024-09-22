@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=3 uid="uid://d0ncypjorv1ml"]
 
-[ext_resource type="Script" path="res://Scripts/Entity/Entity.gd" id="1_t7l4m"]
-[ext_resource type="Script" path="res://Scripts/Entity/Player.gd" id="2_tiqq6"]
+[ext_resource type="Script" path="res://Scripts/Entity/creature.gd" id="1_t7l4m"]
+[ext_resource type="Script" path="res://Scripts/Entity/player.gd" id="2_tiqq6"]
 [ext_resource type="Texture2D" uid="uid://dmvfq5xkmm8ei" path="res://Assets/Pixel Art/blue-tile.png" id="3_f7lmd"]
 [ext_resource type="Script" path="res://Scripts/UI/inventory.gd" id="4_hdt6b"]
 [ext_resource type="Script" path="res://Scripts/Terrain/chunk_manager.gd" id="4_so3vg"]
@@ -66,23 +66,23 @@ sources/6 = SubResource("TileSetAtlasSource_rjjyn")
 
 [node name="MainScene" type="Node2D"]
 
-[node name="Entity" type="CharacterBody2D" parent="."]
+[node name="Creature" type="CharacterBody2D" parent="."]
 script = ExtResource("1_t7l4m")
 
-[node name="Player" type="CharacterBody2D" parent="Entity"]
+[node name="Player" type="CharacterBody2D" parent="Creature"]
 script = ExtResource("2_tiqq6")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Entity/Player"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Creature/Player"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Entity/Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Creature/Player"]
 
-[node name="Blue-tile" type="Sprite2D" parent="Entity/Player"]
+[node name="Blue-tile" type="Sprite2D" parent="Creature/Player"]
 texture = ExtResource("3_f7lmd")
 
-[node name="Inventory" type="Node" parent="Entity/Player"]
+[node name="Inventory" type="Node" parent="Creature/Player"]
 script = ExtResource("4_hdt6b")
 
-[node name="Camera2D" type="Camera2D" parent="Entity/Player"]
+[node name="Camera2D" type="Camera2D" parent="Creature/Player"]
 
 [node name="ChunkManager" type="Node" parent="."]
 script = ExtResource("4_so3vg")

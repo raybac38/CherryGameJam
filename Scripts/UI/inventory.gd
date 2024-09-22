@@ -21,5 +21,3 @@ class Inventory:
 		if index <= inventory_size:
 			inventory.remove_at(index)
 			inventory_size -= 1
-	
-	
