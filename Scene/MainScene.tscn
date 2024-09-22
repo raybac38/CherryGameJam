@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://d0ncypjorv1ml"]
+[gd_scene load_steps=33 format=3 uid="uid://d0ncypjorv1ml"]
 
 [ext_resource type="Script" path="res://Scripts/Entity/Entity.gd" id="1_t7l4m"]
 [ext_resource type="Script" path="res://Scripts/Entity/Player.gd" id="2_tiqq6"]
@@ -18,6 +18,12 @@
 [ext_resource type="Script" path="res://Scripts/constante.gd" id="14_wjnwa"]
 [ext_resource type="Texture2D" uid="uid://bbtx6ygqse3dv" path="res://Assets/Pixel Art/Grass7.png" id="15_dggg6"]
 [ext_resource type="PackedScene" uid="uid://ctpcitpeqwa6l" path="res://Scene/gui.tscn" id="15_ri3o1"]
+[ext_resource type="Script" path="res://Scene/music.gd" id="19_c7dlc"]
+[ext_resource type="AudioStream" uid="uid://caplfpciimg37" path="res://Assets/Son/Musique/ost_chill.mp3" id="19_cuqmf"]
+[ext_resource type="Script" path="res://Scene/sfx.gd" id="20_yn3xr"]
+[ext_resource type="Script" path="res://Scene/player_sfx.gd" id="21_b0hc3"]
+[ext_resource type="Script" path="res://Scene/enemy_sfx.gd" id="22_t268c"]
+[ext_resource type="Script" path="res://Scene/uisfx.gd" id="23_ccf32"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wxkl1"]
 texture = ExtResource("9_3hvs0")
@@ -106,3 +112,21 @@ script = ExtResource("13_lvy1m")
 script = ExtResource("14_wjnwa")
 
 [node name="GUI" parent="." instance=ExtResource("15_ri3o1")]
+
+[node name="SoundManager" type="Node" parent="."]
+
+[node name="Music" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("19_cuqmf")
+script = ExtResource("19_c7dlc")
+
+[node name="SFX" type="Node" parent="SoundManager"]
+script = ExtResource("20_yn3xr")
+
+[node name="PlayerSFX" type="Node" parent="SoundManager/SFX"]
+script = ExtResource("21_b0hc3")
+
+[node name="EnemySFX" type="Node" parent="SoundManager/SFX"]
+script = ExtResource("22_t268c")
+
+[node name="UISFX" type="Node" parent="SoundManager/SFX"]
+script = ExtResource("23_ccf32")

@@ -1,6 +1,17 @@
 extends AudioStreamPlayer
 
-#TODO play_ambient
+#TODO faire loop la musique
+
+func play_ambient():
+	var sound = load("res://Assets/Son/Musique/ost_chill.mp3")
+	if stream == sound:
+		return
+	if playing:
+		stop()
+		stream = sound
+		play()
+		return
+	return
 
 #TODO play_combat(phase)
 
