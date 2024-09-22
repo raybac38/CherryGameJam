@@ -7,5 +7,5 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	var direction = (get_parent().get_node("Player").position - position).normalized()
+	var direction = (get_node("../Player").position - position).normalized()
 	move(direction)

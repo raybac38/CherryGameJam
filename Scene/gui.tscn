@@ -6,8 +6,8 @@
 [ext_resource type="Script" path="res://Scripts/UI/health_bar.gd" id="4_ode5r"]
 [ext_resource type="Texture2D" uid="uid://bffl6pey6hhba" path="res://Assets/Pixel Art/hunger_bar_background.png" id="5_60syx"]
 [ext_resource type="Script" path="res://Scripts/UI/hunger_bar.gd" id="5_s18yo"]
-[ext_resource type="Texture2D" uid="uid://dybnj2gbf17jr" path="res://Assets/Pixel Art/hunger_bar_contour.png" id="6_fudyc"]
-[ext_resource type="Texture2D" uid="uid://6xyqccw1ugm4" path="res://Assets/Pixel Art/hunger_bar_filling.png" id="7_fsy7a"]
+[ext_resource type="Texture2D" uid="uid://c13msmqx46av1" path="res://Assets/Pixel Art/food-bar-full.png" id="6_631nr"]
+[ext_resource type="Texture2D" uid="uid://dhhr415v2jpxo" path="res://Assets/Pixel Art/food-bar.png" id="7_5dbof"]
 
 [node name="GUI" type="CanvasLayer"]
 
@@ -43,6 +43,6 @@ grow_vertical = 2
 step = 20.0
 value = 100.0
 texture_under = ExtResource("5_60syx")
-texture_over = ExtResource("6_fudyc")
-texture_progress = ExtResource("7_fsy7a")
+texture_over = ExtResource("6_631nr")
+texture_progress = ExtResource("7_5dbof")
 script = ExtResource("5_s18yo")
